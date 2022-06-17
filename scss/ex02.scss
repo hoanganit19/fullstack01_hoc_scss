@@ -1,0 +1,51 @@
+//Khai báo và gán biến trong SCSS
+//Cú pháp: $tenBien: gia_tri;
+//Tên biến có 1 số quy tắc sau: 
+//- Chứa: số, chữ cái thường, chữ hoa, dấu gạch dưới, dấu gạch ngang
+//- Không được bắt đầu bằng số
+
+//Lưu ý: Nên đặt theo kỹ thuật đặt tên camelCase
+
+//Biến toàn cục
+$primaryColor: red;
+$secondaryColor: yellow;
+
+$baseSpace: 0.9;
+//$columnSpace: $baseSpace + 15px;
+$columnSpace: $baseSpace * 10px;
+
+$columnSpaceMiddle: $baseSpace * 15px;
+
+$columnSpaceLarge: $baseSpace * 20px;
+
+$baseFont: sans-serif;
+
+$bodyFont: Roboto + ", " + $baseFont;
+
+:root{
+    --font-size: 1rem;
+}
+
+h1{
+    //Biến cục bộ
+    $headingBg: green;
+    color: $primaryColor;
+    background: $headingBg;
+    span{
+        color: $secondaryColor;
+    }
+}
+
+.header{
+    $bodyFont: "Open Sans", $baseFont;
+
+    background: $secondaryColor;
+    padding: 0 $columnSpace;
+    font-family: $bodyFont;
+}
+
+body{
+    font-size: var(--font-size);
+    font-family: $bodyFont;
+    padding: $columnSpaceMiddle;
+}

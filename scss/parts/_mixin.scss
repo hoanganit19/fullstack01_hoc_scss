@@ -1,0 +1,36 @@
+//Mixin
+@mixin reset-lists{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin center($width, $space, $prop, $value) {
+    margin: $space auto;
+    width: $width;
+    #{$prop}: $value; //Gọi thuộc tính theo cú pháp: #{$tenbien}
+}
+
+// @mixin  center($prop, $value) {
+//     #{$prop}: $value;
+// }
+
+@mixin position($pos, $x, $y){
+    position: absolute;
+    @if ($pos=='tl'){
+        top: $x;
+        left: $y;
+    } @else if ($pos=='tr'){
+        top: $x;
+        right: $y;
+    } @else if ($pos=='bl'){
+        bottom: $x;
+        left: $y;
+    } @else if ($pos=='br'){
+        bottom: $x;
+        right: $y;
+    } @else{
+        top: 0;
+        left: 0;
+    }
+}

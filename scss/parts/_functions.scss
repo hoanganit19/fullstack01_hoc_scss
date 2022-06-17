@@ -1,0 +1,4 @@
+@function getWidth($column){
+    $width: 100% / $column;
+    @return $width;
+}

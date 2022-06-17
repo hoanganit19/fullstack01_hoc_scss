@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/*Chú thích CSS*/
+:root {
+  --primary-color: blue;
+}
+
+.header .header__inner {
+  background-color: #fff;
+  padding: 30px 0;
+}
+.header .header__inner .logo {
+  max-width: 200px;
+  margin-right: 10px;
+}
+.header .header__inner .logo .text {
+  font-size: 2rem;
+}
+.header .header__inner .menu {
+  display: flex;
+}
+.header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.header .title {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.title {
+  color: rgb(128, 0, 79);
+}
+.title:hover {
+  color: red;
+}
+.title::before {
+  content: "<";
+}
+.title::after {
+  content: ">";
+}
+.title.large {
+  font-size: 2.5rem;
+}
+.title > span {
+  font-style: italic;
+}
+.title:first-child {
+  color: green;
+}
+
+ul.list-posts li a:hover::before {
+  content: "ok";
+}
+ul li {
+  list-style: none;
+}/*# sourceMappingURL=ex01.css.map */

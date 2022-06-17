@@ -1,0 +1,96 @@
+//Chú thích 1 dòng (SCSS)
+
+/*Chú thích CSS*/
+
+//Biến CSS
+
+:root{
+    --primary-color: blue;
+}
+
+//Biến SCSS
+$secondaryColor: rgb(128, 0, 79);
+
+.header{
+    .header__inner{
+        background-color: #fff;
+        padding: 30px 0;
+
+        .logo{
+            max-width: 200px;
+            margin-right: 10px;
+            
+            .text{
+                font-size: 2rem;
+            }
+
+        }
+
+        .menu{
+            display: flex;
+        }
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    //Cú pháp lồng cùng họ thuộc tính
+    .title{
+        text: {
+            align: center;
+            transform: uppercase;
+            decoration: underline;    
+        }
+    }
+}
+
+.title{
+    // color: var(--primary-color);
+
+    color: $secondaryColor;
+
+    &:hover{
+        color: red;
+    }
+
+    &::before{
+        content: '<';
+    }
+
+    &::after{
+        content: '>';
+    }
+
+    &.large{
+        font-size: 2.5rem;
+    }
+
+    > span{
+        font-style: italic;
+    }
+
+    &:first-child{
+        color: green;
+    }
+}
+
+ul{
+    &.list-posts{
+        li{
+            a{
+                &:hover{
+                    &::before{
+                        content: 'ok';
+                    }
+                }
+            }
+        }
+    }
+
+    li{
+        list-style: none;
+    }
+}

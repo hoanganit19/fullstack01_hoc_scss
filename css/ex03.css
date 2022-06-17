@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+.partner-box, .news-box {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.header {
+  background-color: #efefef;
+  font-size: 1rem;
+}
+.header .header__inner {
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+@media screen and (max-width: 768px) {
+  .header .header__inner {
+    border: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header .header__inner {
+    padding: 15px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    background-color: none;
+    box-shadow: 3px 3px 5px 5px #ccc;
+  }
+}
+
+.section-box, .products-box, .about-box {
+  padding: 30px 0;
+}
+
+.about-box {
+  box-shadow: 5px 5px 5px 5px #ccc;
+}
+
+.news-box {
+  box-shadow: 3px 3px 5px 5px #ccc;
+}
+
+.partner-box {
+  display: flex;
+}
+
+ul {
+  margin: 30px auto;
+  width: 50%;
+  color: green;
+}
+ul.primary-menu {
+  background-color: green;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-lists .product__item {
+  width: 20%;
+}
+
+.content {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}/*# sourceMappingURL=ex03.css.map */

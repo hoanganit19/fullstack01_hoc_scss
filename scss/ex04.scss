@@ -1,0 +1,75 @@
+//Import system
+
+@import 'parts/reset';
+@import 'parts/variable';
+@import 'parts/functions';
+@import 'parts/mixin';
+@import 'parts/placeholders';
+@import 'parts/base';
+
+//Import component
+@import 'components/header';
+
+//$length: 12;
+
+//Vòng lặp chạy từ 1 đến 12
+// @for $index from 1 through $length
+// {
+//     $columnWidth:  100% / (12 / $index);
+
+//     .col-#{$index}{
+//         max-width: $columnWidth;
+//         flex-basis: $columnWidth;
+//     }
+// }
+
+// $index: 12;
+// @while $index>=1 {
+//     $columnWidth:  100% / (12 / $index);
+//     .col-#{$index}{
+//         max-width: $columnWidth;
+//         flex-basis: $columnWidth;
+//     }
+
+//     $index: $index - 1; //Lưu ý chỗ này
+// }
+
+$sizes: 40, 50, 80, 100;
+
+//$bienchay in $danhsach
+@each $size in $sizes {
+
+    //Nếu muốn thay đổi $size thành tên khác => Dùng @if @else
+
+    .item-#{$size}{
+        font-size: $size + px;
+        width: $size * 2 + px;
+    }
+}
+
+//each nhiều giá trị
+$valueLists: 
+(small, 40, normal), 
+(regular, 50, bold), 
+(medium, 70, 900);
+
+@each $name, $size, $style in $valueLists {
+    .product-#{$name}{
+        font-size: $size * 2 + px;
+        font-weight: $style;
+    }
+}
+
+//each với giá trị map (Giống như object trong Javascript)
+$valueLists: (small: 40, medium: 80, large: 100);
+
+@each $name, $size in $valueLists {
+    .column-#{$name}{
+        font-size: 2 * $size + px;
+        width: $size * 3 + px;
+    }
+}
+
+.text{
+    color: red;
+}

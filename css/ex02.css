@@ -1,0 +1,23 @@
+:root {
+  --font-size: 1rem;
+}
+
+h1 {
+  color: red;
+  background: green;
+}
+h1 span {
+  color: yellow;
+}
+
+.header {
+  background: yellow;
+  padding: 0 9px;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: Roboto, sans-serif;
+  padding: 13.5px;
+}/*# sourceMappingURL=ex02.css.map */

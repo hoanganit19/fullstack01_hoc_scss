@@ -1,0 +1,60 @@
+@import 'parts/variable';
+@import 'parts/reset';
+@import 'parts/base';
+@import 'parts/functions';
+@import 'parts/mixin';
+@import 'parts/placeholders';
+@import 'components/header';
+
+
+.section-box{
+    padding: 30px 0;
+}
+
+.about-box{
+    @extend .section-box; 
+    box-shadow: 5px 5px 5px 5px #ccc;
+}
+
+.products-box{
+    @extend .section-box;
+}
+
+.news-box{
+    @extend %reset-box;
+    box-shadow: 3px 3px 5px 5px #ccc;
+}
+
+.partner-box{
+    @extend %reset-box;
+    display: flex;
+}
+
+ul{
+    &.primary-menu{
+        
+        background-color: green;
+
+        @include reset-lists;
+    }
+
+    @include center(50%, 30px, color, green);
+    //@include center(color, red);
+}
+
+.product-lists{
+    $width: getWidth(5);
+
+    .product__item{
+        width: $width;
+    }
+}
+
+$check: true;
+
+@if ($check){
+    .content{
+        @include position(bl, 10px, 20px);
+    }
+}
+

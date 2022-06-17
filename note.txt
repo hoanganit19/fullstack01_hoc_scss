@@ -1,0 +1,60 @@
+"liveSassCompile.settings.formats": [{
+    "format": "expanded",
+    "extensionName": ".css",
+    "savePath": "~/../css/"
+}]
+
+Ví dụ:
+
+ul.list-posts li a:hover::before{
+    content: 'ok';
+}
+
+Câu lệnh @if trong SCSS
+
+//Trường hợp 1
+@if (condition){
+    //Noi dung
+}
+
+//Trường hợp 2
+@if (condition){
+    //Noi dung dung 
+} @else{
+    //Noi dung sai
+}
+
+//Trường hợp 3
+@if (condition){
+    //Noi dung
+} @else if (condition){
+    //Noi dung
+} @else if (condition){
+    //Noi dung
+} @else if (condition){
+    //Noi dung
+} @else{
+    //Truong hop con lai
+}
+
+//Trường hợp 4
+
+@if (condition){
+    @if (condition){
+
+    } @else{
+        
+    }
+} @else{
+
+}
+
+Minify CSS bằng Scss
+
+sass --watch duong_dan_scss:duong_dan_css --style compressed
+
+Ví dụ:
+
+sass --watch scss/style.scss:css/style.min.css --style compressed
+
+sass --watch scss:css --style compressed => Không nên dùng
